@@ -4,8 +4,18 @@ import enrollmentRepository from '@/repositories/enrollment-repository';
 import paymentsRepository from '@/repositories/payments-repository';
 import ticketsRepository from '@/repositories/tickets-repository';
 
+async function verifyTicketAndEnrollment(ticketId: number, userId: number) {
+  const ticket = await ticketsRepository.findTickeyById(ticketId);
+  if (!ticket) throw notFoundError();
+
+  const enrollment = await enrollmentRepository.findById(ticket.enrollmentId);
+  if (!enrollment) throw notFoundError();
+
+  if (enrollment.userId !== userId) throw unauthorizedError();
+}
 
 async function getPaymentByTicketId(userId: number, ticketId: number) {
+  await verifyTicketAndEnrollment(ticketId, userId);
 
   const payment = await paymentsRepository.findPaymentByTicketId(ticketId);
   if (!payment) throw notFoundError();
@@ -14,6 +24,7 @@ async function getPaymentByTicketId(userId: number, ticketId: number) {
 }
 
 async function paymentProcess(ticketId: number, userId: number, cardData: CardPaymentParams) {
+  await verifyTicketAndEnrollment(ticketId, userId);
 
   const ticket = await ticketsRepository.findTickeWithTypeById(ticketId);
 
