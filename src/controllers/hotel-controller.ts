@@ -20,7 +20,7 @@ export async function getHotelsWithRooms(req: AuthenticatedRequest, res: Respons
 
   try {
     const hotels = await hotelsService.getHotelsWithRooms(userId, Number(hotelId));
-
+    
     return res.status(httpStatus.OK).send(hotels);
   } catch (error) {
     next(error);
