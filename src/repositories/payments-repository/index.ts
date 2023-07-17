@@ -18,4 +18,8 @@ async function createPayment(ticketId: number, params: PaymentParams) {
   });
 }
 
+<<<<<<< HEAD
 export default { findPaymentByTicketId, createPayment };
+=======
+export default { findPaymentByTicketId, createPayment };
+>>>>>>> 37ba8f70aa6076dc5099fa09f8c936fdb684f1c5

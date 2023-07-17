@@ -47,10 +47,13 @@ export type RequestError = {
   message: string;
 };
 
+<<<<<<< HEAD
 export type InputTicketBody = {
   ticketTypeId: number;
 };
 
+=======
+>>>>>>> 37ba8f70aa6076dc5099fa09f8c936fdb684f1c5
 export type CreateTicketParams = Omit<Ticket, 'id' | 'createdAt' | 'updatedAt'>;
 
 export type CardPaymentParams = {
@@ -61,4 +64,12 @@ export type CardPaymentParams = {
   cvv: number;
 };
 
+<<<<<<< HEAD
 export type PaymentParams = Omit<Payment, 'id' | 'createdAt' | 'updatedAt'>;
+=======
+export type PaymentParams = Omit<Payment, 'id' | 'createdAt' | 'updatedAt'>;
+
+export type InputTicketBody = {
+  ticketTypeId: number;
+};
+>>>>>>> 37ba8f70aa6076dc5099fa09f8c936fdb684f1c5

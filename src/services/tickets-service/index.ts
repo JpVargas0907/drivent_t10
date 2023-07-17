@@ -40,4 +40,8 @@ async function createTicket(userId: number, ticketTypeId: number): Promise<Ticke
 
 const ticketService = { getTicketType, getTicketByUserId, createTicket };
 
+<<<<<<< HEAD
 export default ticketService;
+=======
+export default ticketService;
+>>>>>>> 37ba8f70aa6076dc5099fa09f8c936fdb684f1c5

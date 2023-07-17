@@ -39,4 +39,8 @@ export async function paymentProcess(req: AuthenticatedRequest, res: Response) {
     }
     return res.sendStatus(httpStatus.NOT_FOUND);
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 37ba8f70aa6076dc5099fa09f8c936fdb684f1c5

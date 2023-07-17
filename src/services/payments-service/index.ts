@@ -42,4 +42,8 @@ async function paymentProcess(ticketId: number, userId: number, cardData: CardPa
   return payment;
 }
 
+<<<<<<< HEAD
 export default { getPaymentByTicketId, paymentProcess };
+=======
+export default { getPaymentByTicketId, paymentProcess };
+>>>>>>> 37ba8f70aa6076dc5099fa09f8c936fdb684f1c5
