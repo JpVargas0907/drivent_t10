@@ -6,16 +6,14 @@ import { TicketStatus } from '.prisma/client';
 import { cleanDb, generateValidToken } from '../helpers';
 import {
   createEnrollmentWithAddress,
+  createHotel,
   createPayment,
+  createRoomWithHotelId,
   createTicket,
   createTicketTypeRemote,
   createTicketTypeWithHotel,
   createUser,
 } from '../factories';
-import {
-    createHotel,
-    createRoomWithHotelId
-} from '../factories/hotels-factory';
 import app, { init } from '@/app';
 
 beforeAll(async () => {
