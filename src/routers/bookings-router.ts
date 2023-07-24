@@ -4,7 +4,7 @@ import {
   createBookingController,
   getBookingController,
   updateBookingController,
-} from '@/controllers/index';
+} from '@/controllers/bookings-controller';
 
 const bookingsRouter = Router();
 
