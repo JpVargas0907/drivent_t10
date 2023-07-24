@@ -40,7 +40,7 @@ async function updateBookingService(bookingId: number, roomId: number, userId: n
   const booking = await bookingsRepository.getBookingRepository(userId);
 
   if (!booking) {
-    throw notFoundError();
+    throw noCapacityError();
   }
 
   const room = await bookingsRepository.findRoom(roomId);
